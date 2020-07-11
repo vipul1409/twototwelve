@@ -1,0 +1,29 @@
+{% extends 'videoofday/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+    {% for o in '0123'|make_list %}
+    <div class="row">
+        <div class="col-md-4">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/137857207" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
